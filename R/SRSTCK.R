@@ -28,6 +28,7 @@ SRSTCK <- function (data, cancer, type, cell_type, multi.sample = "FALSE", minGe
                     cell.line = "no", ngene.chr = 5, win.size = 25, KS.cut = 0.15,
                     distance = "euclidean", n.cores = 1)
 { 
+  
   sen.gene <- rownames(Model)
   sen.model <- Model$sen_model
   non.sen.model <- Model$non_sen_model
