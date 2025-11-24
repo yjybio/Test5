@@ -28,8 +28,8 @@ SRSTCK <- function (data, cancer, type, cell_type, multi.sample = "FALSE", minGe
                     cell.line = "no", ngene.chr = 5, win.size = 25, KS.cut = 0.15,
                     distance = "euclidean", n.cores = 1)
 { 
-  raw_url <- "https://github.com/yjybio/Test5/raw/main/Result_Data/Model.xlsx"
-  Model <- readxl::read_excel(raw_url)
+  model_file <- system.file("Result_Data", "Model.xlsx", package = "Test5")
+  Model <- readxl::read_excel(model_file)
   Model <- as.data.frame(Model)
   rownames(Model) <- Model[, 1]
   Model <- Model[, -1]
